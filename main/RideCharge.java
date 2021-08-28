@@ -1,22 +1,19 @@
 package main;
 
 public class RideCharge {
-	public static int MinimumCostPerKM = 10;
-	public static int CostPerMinute = 1;
-	public static int MinimumFare = 5;
+    public int MinimumCostPerKM = 10;
+    public int CoastPerMinute = 1;
+    public int MinimumFare = 5;
 }
 
 class Ride extends RideCharge {
-	public double distance;
-	public int time;
-
-	public Ride(double distance, int time) {
-		this.distance = distance;
-		this.time = time;
-	}
-
-	public double CalculateFare() {
-		double totalFare = (distance * MinimumCostPerKM) + (time * CostPerMinute);
-		return Math.max(MinimumFare, totalFare);
-	}
+    public double distance;
+    public int time;
+    public String userId;
+    public Ride(double distance, int time, String userId) {
+        this.distance = distance;
+        this.time = time;
+        this.userId = userId;
+    }
+    public  Ride(){};
 }
