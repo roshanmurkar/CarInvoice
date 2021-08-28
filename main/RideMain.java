@@ -24,8 +24,10 @@ public class RideMain {
 		for (Ride r : noOfRide) {
 			totalFare += (r.distance * RideCharge.MinimumCostPerKM) + (r.time * RideCharge.CostPerMinute);
 		}
+		int avgFarePerRide=  (int) (totalFare/n);
 
 		System.out.println("The total Fare " + totalFare + " for " + n + " no.of ride's");
+		System.out.println("Average Fare per Ride is "+avgFarePerRide );
 		sc.close();
 	}
 
